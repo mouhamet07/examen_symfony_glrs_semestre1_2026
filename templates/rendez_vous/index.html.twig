@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion Rv - Ajout{% endblock %}
+{% block navTitle%}Patient{%endblock%}
+
+{% block body %}
+<main class="main-container py-4">
+    <div class="container">
+        <h1 class="h3 mb-3">Demande de Rendez-Vous</h1>
+        <div class="card rounded shadow-sm p-3 bg-body">
+            <div class="card-body">
+                {{ form_start(form) }}
+                <div class="mb-3">
+                    {{ form_label(form.dateRv) }}
+                    {{ form_widget(form.dateRv) }}
+                    {{ form_errors(form.dateRv) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.type) }}
+                    {{ form_widget(form.type) }}
+                    {{ form_errors(form.type) }}
+                    <div class="text-muted">Confirmer ci-dessous la nature selon le type de rendez-vous choisis</div>
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.prestation) }}
+                    {{ form_widget(form.prestation) }}
+                    {{ form_errors(form.prestation) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.consultation) }}
+                    {{ form_widget(form.consultation) }}
+                    {{ form_errors(form.consultation) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.patient) }}
+                    {{ form_widget(form.patient) }}
+                    {{ form_errors(form.patient) }}
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Enregistrer
+                </button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
